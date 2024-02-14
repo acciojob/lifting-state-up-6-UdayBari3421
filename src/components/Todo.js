@@ -10,13 +10,13 @@ const Todo = ({ todos, setTodos }) => {
         {todos.map((item, index) => (
           <li key={index}>
             {item.title}
-            {item.visisble == true ? (
+            {item.visisble && (
               <button
                 onClick={() => setTodos([...todos], (item.visisble = false))}
               >
                 Complete
               </button>
-            ) : null}
+            )}
           </li>
         ))}
       </ul>
