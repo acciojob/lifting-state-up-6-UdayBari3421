@@ -9,7 +9,12 @@ const Todo = ({ todos }) => {
       <ul>
         {todos.map((item, index) => (
           <li key={index}>
-            {item} <button onClick={(e) => e.target.remove()}>Completed</button>
+            {item}{" "}
+            <input
+              type="button"
+              onClick={(e) => e.target.remove()}
+              value="completed"
+            />
           </li>
         ))}
       </ul>
