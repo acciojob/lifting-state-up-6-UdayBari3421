@@ -1,7 +1,6 @@
 import React from "react";
 
-const Todo = (props) => {
-  const { todos, handleComplete } = props;
+const Todo = ({ todos, handleComplete }) => {
   return (
     <ul>
       <h2>Child Component</h2>
