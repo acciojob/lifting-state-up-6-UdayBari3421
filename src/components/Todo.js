@@ -12,11 +12,9 @@ const Todo = ({ todos, setTodos }) => {
             {item.title}
             {item.visisble == true ? (
               <button
-                onClick={() => {
-                  setTodos([...todos], (item.visisble = false));
-                }}
+                onClick={() => setTodos([...todos], (item.visisble = false))}
               >
-                Completed
+                complete
               </button>
             ) : null}
           </li>
