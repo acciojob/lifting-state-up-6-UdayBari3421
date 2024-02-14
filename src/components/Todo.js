@@ -14,7 +14,7 @@ const Todo = ({ todos, setTodos }) => {
               <button
                 onClick={() => setTodos([...todos], (item.visisble = false))}
               >
-                complete
+                Complete
               </button>
             ) : null}
           </li>
