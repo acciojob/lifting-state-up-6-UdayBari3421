@@ -1,6 +1,6 @@
 import React from "react";
 
-const Todo = ({ todos }) => {
+const Todo = ({ todos, setTodos }) => {
   return (
     <div>
       <div>
@@ -9,12 +9,16 @@ const Todo = ({ todos }) => {
       <ul>
         {todos.map((item, index) => (
           <li key={index}>
-            {item}{" "}
-            <input
-              type="button"
-              onClick={(e) => e.target.remove()}
-              value="completed"
-            />
+            {item.title}
+            {item.visisble == true ? (
+              <button
+                onClick={() => {
+                  setTodos([...todos], (item.visisble = false));
+                }}
+              >
+                Completed
+              </button>
+            ) : null}
           </li>
         ))}
       </ul>
