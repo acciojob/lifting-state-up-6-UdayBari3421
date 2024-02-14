@@ -1,26 +1,19 @@
 import React from "react";
 
-const Todo = ({ todos, setTodos }) => {
+const Todo = (props) => {
+  const { todos, handleComplete } = props;
   return (
-    <div>
-      <div>
-        <h2>Child Component</h2>
-      </div>
-      <ul>
-        {todos.map((item, index) => (
-          <li key={index}>
-            {item.title}
-            {item.visisble && (
-              <button
-                onClick={() => setTodos([...todos], (item.visisble = false))}
-              >
-                Complete
-              </button>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      <h2>Child Component</h2>
+      {todos.map((item, index) => (
+        <li key={index}>
+          {item.title}
+          {!item.visisble && (
+            <button onClick={() => handleComplete(index)}>Complete</button>
+          )}
+        </li>
+      ))}
+    </ul>
   );
 };
 
