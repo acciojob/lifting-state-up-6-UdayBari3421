@@ -8,7 +8,7 @@ const Todo = (props) => {
       {todos.map((item, index) => (
         <li key={index}>
           {item.title}
-          {!item.visisble && (
+          {item.visisble && (
             <button onClick={() => handleComplete(index)}>Complete</button>
           )}
         </li>

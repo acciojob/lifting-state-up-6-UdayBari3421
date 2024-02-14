@@ -6,20 +6,20 @@ const App = () => {
   const [todos, setTodos] = useState([
     {
       title: "Learn React",
-      visisble: false,
+      visisble: true,
     },
     {
       title: "Build a React app",
-      visisble: false,
+      visisble: true,
     },
     {
       title: "Deploye the React app",
-      visisble: false,
+      visisble: true,
     },
   ]);
 
   function handleComplete(index) {
-    setTodos([...todos], (todos[index].visisble = true));
+    setTodos([...todos], (todos[index].visisble = false));
   }
   return (
     <div className="parent">
